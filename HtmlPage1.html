@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script lang="javascript" type="text/javascript">
+      //  <![CDATA[
+            function btnShow_onclick() {
+                alert(userMessage.value);
+            }
+        //    ]]>
+    </script>
+    <title></title>
+    <style type="text/css">
+        #Text1 {
+            width: 637px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Build a form to get user info. -->
+    <form id="defaultPage" action="http://localhost/Cars/ClassicAspPage.asp" method="GET">
+        <p>Enter a message</p>
+        <p><input id="userMessage" type="text"/></p>
+        <p><input id="btnShow" type="button" value="Show!" onclick="return btnShow_onclick()"/>
+            <input id="btnPostBack" type="submit" value="Post to Server"/>
+        </p>
+        <p><input id="btnReset" type="reset" value="Reset!"/></p>
+
+    </form>
+   
+    <p>This textbox is outside our Form, so Reset button doesn't work on it</p>
+    <p><input id="Text1" type="text"/></p>
+</body>
+</html>
